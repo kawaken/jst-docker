@@ -1,0 +1,6 @@
+
+$ docker run --rm jst-alpine date
+Tue Aug 28 23:07:21 JST 2018
+
+$ docker run --rm alpine date
+Tue Aug 28 14:07:31 UTC 2018
