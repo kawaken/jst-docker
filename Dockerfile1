@@ -1,0 +1,4 @@
+FROM alpine:latest
+
+COPY ["time-test", "/"]
+CMD [ "/time-test" ]
