@@ -19,4 +19,7 @@ func main() {
 	jst = time.FixedZone("JST", 9*60*60)
 	fmt.Println(t.In(jst))
 
+	time.Local = jst
+	fmt.Println(time.Now())
+
 }
