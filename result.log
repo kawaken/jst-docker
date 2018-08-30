@@ -1,23 +1,17 @@
-$ docker run --rm jst-time-test1
-2018-08-29 10:20:04.5279391 +0000 UTC m=+0.000194801
-panic: time: missing Location in call to Time.In
+bash-3.2$ docker run --rm jst-time-test1
+2018-08-30 00:36:56.4097601 +0000 UTC m=+0.000328601
+open /usr/local/Cellar/go/1.9.2/libexec/lib/time/zoneinfo.zip: no such file or directory
+2018-08-30 09:36:56.4097601 +0900 JST
+2018-08-30 09:36:56.4098805 +0900 JST m=+0.000448301
 
-goroutine 1 [running]:
-time.Time.In(0xbed9bab51f77b61c, 0x2f8f1, 0x53ab80, 0x0, 0xc42000e1e0, 0x0, 0xc42000e1c0)
-        /usr/local/Cellar/go/1.9.2/libexec/src/time/time.go:1073 +0xc0
-main.main()
-        /Users/kawano.kentaro/projects/src/github.com/kawaken/jst-docker/main.go:13 +0x111
+bash-3.2$ docker run --rm jst-time-test2
+2018-08-30 09:37:09.7907743 +0900 JST m=+0.000254901
+open /usr/local/Cellar/go/1.9.2/libexec/lib/time/zoneinfo.zip: no such file or directory
+2018-08-30 09:37:09.7907743 +0900 JST
+2018-08-30 09:37:09.7908918 +0900 JST m=+0.000372901
 
-$ docker run --rm jst-time-test2
-2018-08-29 19:20:08.4511553 +0900 JST m=+0.000270001
-panic: time: missing Location in call to Time.In
-
-goroutine 1 [running]:
-time.Time.In(0xbed9bab61ae41564, 0x41eb1, 0x53ab80, 0x0, 0xc42000e1e0, 0x0, 0xc42000e1c0)
-        /usr/local/Cellar/go/1.9.2/libexec/src/time/time.go:1073 +0xc0
-main.main()
-        /Users/kawano.kentaro/projects/src/github.com/kawaken/jst-docker/main.go:13 +0x111
-
-$ docker run --rm jst-time-test3
-2018-08-29 19:20:10.9607839 +0900 JST m=+0.000242201
-2018-08-29 19:20:10.9607839 +0900 JST
+bash-3.2$ docker run --rm jst-time-test3
+2018-08-30 09:37:15.3019175 +0900 JST m=+0.000325101
+2018-08-30 09:37:15.3019175 +0900 JST
+2018-08-30 09:37:15.3019175 +0900 JST
+2018-08-30 09:37:15.3020498 +0900 JST m=+0.000457301
